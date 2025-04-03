@@ -1,11 +1,15 @@
 ## This is TDD Assignment for Incubyte
 
-This is console application for implementing add method 
+This is a console application for implementing the add method 
 
 
-#### How to execute application 
+#### How to execute the application 
+first run command 
+```
+bundle install
+```
 
-run below command at root of project: 
+Run below command at root of project: 
 ```
 ruby lib/string_calculator.rb
 ```
@@ -18,8 +22,8 @@ Enter numbers to add (press Enter Button twice to exit):
 - press Enter Button twice for execution
 
 
-#### Steps used for creating application 
- Step1: Added gem file \
+#### Steps used for creating the application 
+ Step 1: Added gem file \
  ``
  bundle init
  ``
@@ -47,10 +51,10 @@ This command created the necessary RSpec configuration files.
 Step 4: In spec/ directory and add a test file string_calculator_spec.rb. Write tests before implementing the logic.
 
 
-Step 5: Create the String Calculator ClassInside the lib/ directory, \
-create a file string_calculator.rb and define a class StringCalculator with an add method.
+Step 5: Create the String Calculator Class Inside the lib/ directory, \
+Create a file string_calculator.rb and define a class StringCalculator with an add method.
 
 
 Note: 
 
-1) i consider that space is not default delimiter only comman and Enter are.
+1) I consider that space is not a default delimiter, only comma and Enter are.
