@@ -3,19 +3,19 @@
 This is console application for implementing add method 
 
 
-#### Who to execute application 
+#### How to execute application 
 
 run below command at root of project: 
 ```
 ruby lib/string_calculator.rb
 ```
-it will promt you 
+it will promt you \
 ``
 Enter numbers to add (press Enter Button twice to exit):
 ``
 
-- enter the numbers enter or comma as default delimiter 
-- press Enter Button twice to stop input
+- enter the numbers, Enter(\n) and comma(,) are default delimiter 
+- press Enter Button twice for execution
 
 
 #### Steps used for creating application 
@@ -53,4 +53,4 @@ create a file string_calculator.rb and define a class StringCalculator with an a
 
 Note: 
 
-1) i consider that space is not default delimiter only comman and enter are 
+1) i consider that space is not default delimiter only comman and Enter are.
