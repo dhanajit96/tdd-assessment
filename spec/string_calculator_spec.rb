@@ -31,5 +31,10 @@ describe StringCalculator do
     it 'raises an exception for negative numbers' do
       expect { StringCalculator.add('1,-2,3,-4') }.to raise_error('negative numbers not allowed -2,-4')
     end
+
+    it "returns 0 if spaces are used as delimiters" do
+        expect(StringCalculator.add("10 20 30")).to eq(0)
+    end
+      
   end
 end

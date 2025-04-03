@@ -3,12 +3,9 @@ class StringCalculator
   def self.add(numbers)
     return 0 if numbers.empty?
 
-    delimiter = ','
-    if numbers.start_with?('//')
-      parts = numbers.split("\n", 2)
-      delimiter = parts.first[2..-1]
-      numbers = parts.last
-    end
+    delimiter, numbers = find_delimiter(numbers)
+
+    return 0 if numbers.match?(/[^0-9,\n#{Regexp.escape(delimiter)}-]/)
 
     nums = numbers.split(/[\n,#{Regexp.escape(delimiter)}]/).map(&:to_i)
 
@@ -17,11 +14,21 @@ class StringCalculator
 
     nums.sum
   end
+
+  def self.find_delimiter(numbers)
+    delimiter = ','
+    if numbers.start_with?('//')
+      parts = numbers.split("\n", 2)
+      delimiter = parts.first[2..-1]
+      numbers = parts.last
+    end
+    [delimiter, numbers]
+  end
 end
 
 # console application
 if __FILE__ == $0
-  puts 'Enter numbers to add (press double Enter to exit):'
+  puts 'Enter numbers to add (press Enter Button twice to exit):'
   input_lines = []
   while (line = gets.chomp) != ''
     input_lines << line
